@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B13DE21C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
+		19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
+		19B13DE41C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD21C896A0D00F5F5A8 /* JsonUtil.cpp */; };
+		19B13DE51C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD21C896A0D00F5F5A8 /* JsonUtil.cpp */; };
+		19B13DE61C896A0D00F5F5A8 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD41C896A0D00F5F5A8 /* Random.cpp */; };
+		19B13DE71C896A0D00F5F5A8 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD41C896A0D00F5F5A8 /* Random.cpp */; };
+		19B13DEA1C896A0D00F5F5A8 /* Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD81C896A0D00F5F5A8 /* Service.cpp */; };
+		19B13DEB1C896A0D00F5F5A8 /* Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD81C896A0D00F5F5A8 /* Service.cpp */; };
+		19B13DEC1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DDA1C896A0D00F5F5A8 /* ServicesManager.cpp */; };
+		19B13DED1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DDA1C896A0D00F5F5A8 /* ServicesManager.cpp */; };
+		19B13DEE1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DDC1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp */; };
+		19B13DEF1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DDC1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp */; };
+		19B13DF01C896A0D00F5F5A8 /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DDE1C896A0D00F5F5A8 /* StringUtils.cpp */; };
+		19B13DF11C896A0D00F5F5A8 /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DDE1C896A0D00F5F5A8 /* StringUtils.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -103,6 +117,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Crypto.cpp; sourceTree = "<group>"; };
+		19B13DD01C896A0D00F5F5A8 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		19B13DD11C896A0D00F5F5A8 /* DeclaredTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclaredTypes.h; sourceTree = "<group>"; };
+		19B13DD21C896A0D00F5F5A8 /* JsonUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonUtil.cpp; sourceTree = "<group>"; };
+		19B13DD31C896A0D00F5F5A8 /* JsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonUtil.h; sourceTree = "<group>"; };
+		19B13DD41C896A0D00F5F5A8 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		19B13DD51C896A0D00F5F5A8 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		19B13DD81C896A0D00F5F5A8 /* Service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Service.cpp; sourceTree = "<group>"; };
+		19B13DD91C896A0D00F5F5A8 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		19B13DDA1C896A0D00F5F5A8 /* ServicesManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServicesManager.cpp; sourceTree = "<group>"; };
+		19B13DDB1C896A0D00F5F5A8 /* ServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesManager.h; sourceTree = "<group>"; };
+		19B13DDC1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteFrameHelper.cpp; sourceTree = "<group>"; };
+		19B13DDD1C896A0D00F5F5A8 /* SpriteFrameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteFrameHelper.h; sourceTree = "<group>"; };
+		19B13DDE1C896A0D00F5F5A8 /* StringUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtils.cpp; sourceTree = "<group>"; };
+		19B13DDF1C896A0D00F5F5A8 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -223,6 +252,36 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		19B13DCD1C896A0D00F5F5A8 /* MelonGames */ = {
+			isa = PBXGroup;
+			children = (
+				19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */,
+				19B13DD01C896A0D00F5F5A8 /* Crypto.h */,
+				19B13DD11C896A0D00F5F5A8 /* DeclaredTypes.h */,
+				19B13DD21C896A0D00F5F5A8 /* JsonUtil.cpp */,
+				19B13DD31C896A0D00F5F5A8 /* JsonUtil.h */,
+				19B13DD41C896A0D00F5F5A8 /* Random.cpp */,
+				19B13DD51C896A0D00F5F5A8 /* Random.h */,
+				19B13DD71C896A0D00F5F5A8 /* Services */,
+				19B13DDC1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp */,
+				19B13DDD1C896A0D00F5F5A8 /* SpriteFrameHelper.h */,
+				19B13DDE1C896A0D00F5F5A8 /* StringUtils.cpp */,
+				19B13DDF1C896A0D00F5F5A8 /* StringUtils.h */,
+			);
+			path = MelonGames;
+			sourceTree = "<group>";
+		};
+		19B13DD71C896A0D00F5F5A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19B13DD81C896A0D00F5F5A8 /* Service.cpp */,
+				19B13DD91C896A0D00F5F5A8 /* Service.h */,
+				19B13DDA1C896A0D00F5F5A8 /* ServicesManager.cpp */,
+				19B13DDB1C896A0D00F5F5A8 /* ServicesManager.h */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +360,7 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				19B13DCD1C896A0D00F5F5A8 /* MelonGames */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -497,7 +557,14 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				19B13DE41C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
+				19B13DEE1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */,
+				19B13DE61C896A0D00F5F5A8 /* Random.cpp in Sources */,
+				19B13DF01C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				19B13DEA1C896A0D00F5F5A8 /* Service.cpp in Sources */,
+				19B13DEC1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
+				19B13DE21C896A0D00F5F5A8 /* Crypto.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,9 +573,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B13DE71C896A0D00F5F5A8 /* Random.cpp in Sources */,
+				19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */,
+				19B13DED1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
+				19B13DE51C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				19B13DEF1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */,
+				19B13DEB1C896A0D00F5F5A8 /* Service.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				19B13DF11C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
