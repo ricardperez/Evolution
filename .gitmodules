@@ -1,0 +1,3 @@
+[submodule "Classes/MelonGames"]
+	path = Classes/MelonGames
+	url = https://github.com/ricardperez/MelonGames.git
