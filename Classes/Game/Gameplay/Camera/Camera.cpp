@@ -17,6 +17,7 @@ namespace MelonGames
 {
     namespace Evolution
     {
+#pragma mark - Camera
         Camera::Camera(cocos2d::Node* contentNode)
         : contentNode(contentNode)
         , clippingNode(nullptr)

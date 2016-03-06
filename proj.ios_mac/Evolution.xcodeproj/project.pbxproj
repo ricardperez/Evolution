@@ -43,6 +43,16 @@
 		19B13E881C89817300F5F5A8 /* tilemaps in Resources */ = {isa = PBXBuildFile; fileRef = 19B13E861C89817300F5F5A8 /* tilemaps */; };
 		19B13E921C89AD0C00F5F5A8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13E901C89AD0C00F5F5A8 /* Camera.cpp */; };
 		19B13E931C89AD0C00F5F5A8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13E901C89AD0C00F5F5A8 /* Camera.cpp */; };
+		19B13E961C89D84A00F5F5A8 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13E941C89D84A00F5F5A8 /* Map.cpp */; };
+		19B13E971C89D84A00F5F5A8 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13E941C89D84A00F5F5A8 /* Map.cpp */; };
+		19B13E9A1C89D91300F5F5A8 /* MapEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13E981C89D91300F5F5A8 /* MapEntity.cpp */; };
+		19B13E9B1C89D91300F5F5A8 /* MapEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13E981C89D91300F5F5A8 /* MapEntity.cpp */; };
+		19B13EE71C89DF8A00F5F5A8 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13EE51C89DF8A00F5F5A8 /* Component.cpp */; };
+		19B13EE81C89DF8A00F5F5A8 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13EE51C89DF8A00F5F5A8 /* Component.cpp */; };
+		19B13EEB1C89E00C00F5F5A8 /* PositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13EE91C89E00C00F5F5A8 /* PositionComponent.cpp */; };
+		19B13EEC1C89E00C00F5F5A8 /* PositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13EE91C89E00C00F5F5A8 /* PositionComponent.cpp */; };
+		19B13EEF1C89E1BD00F5F5A8 /* ViewComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13EED1C89E1BD00F5F5A8 /* ViewComponent.cpp */; };
+		19B13EF01C89E1BD00F5F5A8 /* ViewComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13EED1C89E1BD00F5F5A8 /* ViewComponent.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -178,6 +188,16 @@
 		19B13E861C89817300F5F5A8 /* tilemaps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tilemaps; sourceTree = "<group>"; };
 		19B13E901C89AD0C00F5F5A8 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		19B13E911C89AD0C00F5F5A8 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		19B13E941C89D84A00F5F5A8 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		19B13E951C89D84A00F5F5A8 /* Map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
+		19B13E981C89D91300F5F5A8 /* MapEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapEntity.cpp; sourceTree = "<group>"; };
+		19B13E991C89D91300F5F5A8 /* MapEntity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapEntity.hpp; sourceTree = "<group>"; };
+		19B13EE51C89DF8A00F5F5A8 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		19B13EE61C89DF8A00F5F5A8 /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		19B13EE91C89E00C00F5F5A8 /* PositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PositionComponent.cpp; sourceTree = "<group>"; };
+		19B13EEA1C89E00C00F5F5A8 /* PositionComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PositionComponent.hpp; sourceTree = "<group>"; };
+		19B13EED1C89E1BD00F5F5A8 /* ViewComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewComponent.cpp; sourceTree = "<group>"; };
+		19B13EEE1C89E1BD00F5F5A8 /* ViewComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ViewComponent.hpp; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -424,7 +444,12 @@
 			isa = PBXGroup;
 			children = (
 				19B13E8F1C89AA4700F5F5A8 /* Camera */,
+				19B13EA01C89DE7500F5F5A8 /* Component */,
 				19B13E811C897B6700F5F5A8 /* Screens */,
+				19B13E941C89D84A00F5F5A8 /* Map.cpp */,
+				19B13E951C89D84A00F5F5A8 /* Map.hpp */,
+				19B13E981C89D91300F5F5A8 /* MapEntity.cpp */,
+				19B13E991C89D91300F5F5A8 /* MapEntity.hpp */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -445,6 +470,19 @@
 				19B13E911C89AD0C00F5F5A8 /* Camera.hpp */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		19B13EA01C89DE7500F5F5A8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				19B13EE51C89DF8A00F5F5A8 /* Component.cpp */,
+				19B13EE61C89DF8A00F5F5A8 /* Component.hpp */,
+				19B13EE91C89E00C00F5F5A8 /* PositionComponent.cpp */,
+				19B13EEA1C89E00C00F5F5A8 /* PositionComponent.hpp */,
+				19B13EED1C89E1BD00F5F5A8 /* ViewComponent.cpp */,
+				19B13EEE1C89E1BD00F5F5A8 /* ViewComponent.hpp */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -726,14 +764,19 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				19B13DE41C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
 				19B13DEE1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */,
+				19B13EEB1C89E00C00F5F5A8 /* PositionComponent.cpp in Sources */,
 				19B13E711C897A3800F5F5A8 /* AppDelegate.cpp in Sources */,
+				19B13EEF1C89E1BD00F5F5A8 /* ViewComponent.cpp in Sources */,
 				19B13E5D1C8975B200F5F5A8 /* json_writer.cpp in Sources */,
 				19B13DE61C896A0D00F5F5A8 /* Random.cpp in Sources */,
 				19B13E591C8975B200F5F5A8 /* json_value.cpp in Sources */,
 				19B13E7F1C897AAD00F5F5A8 /* ScreenController.cpp in Sources */,
+				19B13EE71C89DF8A00F5F5A8 /* Component.cpp in Sources */,
 				19B13E841C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
 				19B13DF01C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				19B13E961C89D84A00F5F5A8 /* Map.cpp in Sources */,
+				19B13E9A1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
 				19B13E921C89AD0C00F5F5A8 /* Camera.cpp in Sources */,
 				19B13DEA1C896A0D00F5F5A8 /* Service.cpp in Sources */,
 				19B13DEC1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
@@ -747,15 +790,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B13DE71C896A0D00F5F5A8 /* Random.cpp in Sources */,
+				19B13EE81C89DF8A00F5F5A8 /* Component.cpp in Sources */,
 				19B13E851C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
 				19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */,
 				19B13DED1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
 				19B13DE51C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
 				19B13E581C8975B200F5F5A8 /* json_reader.cpp in Sources */,
+				19B13E9B1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
+				19B13E971C89D84A00F5F5A8 /* Map.cpp in Sources */,
 				19B13E5E1C8975B200F5F5A8 /* json_writer.cpp in Sources */,
 				19B13E931C89AD0C00F5F5A8 /* Camera.cpp in Sources */,
 				19B13E5A1C8975B200F5F5A8 /* json_value.cpp in Sources */,
+				19B13EF01C89E1BD00F5F5A8 /* ViewComponent.cpp in Sources */,
 				19B13DEF1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */,
+				19B13EEC1C89E00C00F5F5A8 /* PositionComponent.cpp in Sources */,
 				19B13E721C897A3800F5F5A8 /* AppDelegate.cpp in Sources */,
 				19B13DEB1C896A0D00F5F5A8 /* Service.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
