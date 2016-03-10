@@ -7,6 +7,7 @@
 //
 
 #include "Map.hpp"
+#include "MapView.hpp"
 #include "MapEntity.hpp"
 
 namespace MelonGames
@@ -14,9 +15,30 @@ namespace MelonGames
     namespace Evolution
     {
         Map::Map()
-        : updating(false)
+        : mapView(nullptr)
+        , updating(false)
         {
+            mapView = new MapView();
+        }
+        
+        Map::~Map()
+        {
+            for (auto entity : entities)
+            {
+                delete entity;
+            }
             
+            for (auto& delayedEntityOperation : delayedEntityOperations)
+            {
+                delete delayedEntityOperation.entity;
+            }
+            
+            delete mapView;
+        }
+        
+        MapView* Map::getMapView() const
+        {
+            return mapView;
         }
         
         void Map::update(float dt)
@@ -34,10 +56,10 @@ namespace MelonGames
             {
                 switch (delayedEntityOperation.operation)
                 {
-                    case EntityDelayedOperation::Operation::eAdd:
+                    case DelayedEntityOperation::Operation::eAdd:
                         addEntity(delayedEntityOperation.entity);
                         break;
-                    case EntityDelayedOperation::Operation::eRemove:
+                    case DelayedEntityOperation::Operation::eRemove:
                         removeEntity(delayedEntityOperation.entity);
                         break;
                     default:
@@ -48,16 +70,12 @@ namespace MelonGames
         
         void Map::addEntity(MapEntity* entity)
         {
-            if (entity->getMap() == nullptr)
-            {
-                entity->setMap(this);
-            }
-            
             if (updating)
             {
-                delayedEntityOperations.push_back(EntityDelayedOperation(EntityDelayedOperation::Operation::eAdd, entity));
+                delayedEntityOperations.push_back(DelayedEntityOperation(DelayedEntityOperation::Operation::eAdd, entity));
             } else
             {
+                entity->onAddedToMap(this);
                 entities.push_back(entity);
             }
         }
@@ -66,7 +84,7 @@ namespace MelonGames
         {
             if (updating)
             {
-                delayedEntityOperations.push_back(EntityDelayedOperation(EntityDelayedOperation::Operation::eRemove, entity));
+                delayedEntityOperations.push_back(DelayedEntityOperation(DelayedEntityOperation::Operation::eRemove, entity));
             } else
             {
                 auto it = std::find(entities.begin(), entities.end(), entity);
@@ -74,6 +92,8 @@ namespace MelonGames
                 {
                     entities.erase(it);
                 }
+                
+                entity->onRemovedFromMap(this);
                 
                 delete entity;
             }

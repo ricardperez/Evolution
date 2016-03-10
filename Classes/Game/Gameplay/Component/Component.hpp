@@ -22,9 +22,15 @@ namespace MelonGames
         public:
             DECLARE_BASE_TYPE(Component);
             
+            Component();
             virtual ~Component();
+            
             virtual void onAddedToMapEntity(MapEntity* entity);
             virtual void onRemovedFromMapEntity(MapEntity* entity);
+            virtual void update(float dt);
+            
+        protected:
+            MapEntity* entity;
         };
     }
 }

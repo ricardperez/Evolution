@@ -11,15 +11,11 @@
 
 #include "MelonGames/Screen.h"
 
-namespace cocos2d
-{
-    class TMXTiledMap;
-}
-
 namespace MelonGames
 {
     namespace Evolution
     {
+        class Map;
         class Camera;
         class CameraController;
         
@@ -36,9 +32,9 @@ namespace MelonGames
             void onEnterTransitionDidFinish() override;
             
         private:
+            Map* map;
             Camera* camera;
             CameraController* cameraController;
-            cocos2d::TMXTiledMap* tiledMap;
         };
     }
 }

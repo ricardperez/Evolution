@@ -7,8 +7,9 @@
 //
 
 #include "GameScreen.hpp"
+#include "Map.hpp"
+#include "MapView.hpp"
 #include "Camera/Camera.hpp"
-#include "2d/CCTMXTiledMap.h"
 
 namespace MelonGames
 {
@@ -28,7 +29,7 @@ namespace MelonGames
         }
         
         GameScreen::GameScreen()
-        : tiledMap(nullptr)
+        : map(nullptr)
         , camera(nullptr)
         , cameraController(nullptr)
         {
@@ -36,6 +37,7 @@ namespace MelonGames
         
         GameScreen::~GameScreen()
         {
+            delete map;
             delete cameraController;
             delete camera;
         }
@@ -44,8 +46,8 @@ namespace MelonGames
         {
             if (Base::init())
             {
-                tiledMap = cocos2d::TMXTiledMap::create("tilemaps/level1.tmx");
-                camera = new Camera(tiledMap);
+                map = new Map();
+                camera = new Camera(map->getMapView()->getMainNode());
                 camera->setCameraSize(getContentSize());
                 auto cameraNode = camera->getCameraNode();
                 cameraNode->setAnchorPoint(cocos2d::Vec2::ANCHOR_MIDDLE);

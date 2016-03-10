@@ -15,22 +15,27 @@ namespace MelonGames
 {
     namespace Evolution
     {
+        class MapView;
         class MapEntity;
         
         class Map
         {
         public:
             Map();
+            ~Map();
+            
+            MapView* getMapView() const;
             
             void update(float dt);
             void addEntity(MapEntity* entity);
             void removeEntity(MapEntity* entity);
             
         private:
+            MapView* mapView;
             std::vector<MapEntity*> entities;
             bool updating;
             
-            struct EntityDelayedOperation
+            struct DelayedEntityOperation
             {
                 enum class Operation
                 {
@@ -40,9 +45,9 @@ namespace MelonGames
                 Operation operation;
                 MapEntity* entity;
                 
-                EntityDelayedOperation(Operation operation, MapEntity* entity) : operation(operation), entity(entity) {}
+                DelayedEntityOperation(Operation operation, MapEntity* entity) : operation(operation), entity(entity) {}
             };
-            std::vector<EntityDelayedOperation> delayedEntityOperations;
+            std::vector<DelayedEntityOperation> delayedEntityOperations;
         };
     }
 }

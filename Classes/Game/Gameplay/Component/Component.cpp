@@ -13,12 +13,28 @@ namespace MelonGames
 {
     namespace Evolution
     {
-        void Component::onAddedToMapEntity(MapEntity* entity)
+        Component::Component()
+        : entity(nullptr)
         {
             
         }
         
+        Component::~Component()
+        {
+            
+        }
+        
+        void Component::onAddedToMapEntity(MapEntity* entity)
+        {
+            this->entity = entity;
+        }
+        
         void Component::onRemovedFromMapEntity(MapEntity* entity)
+        {
+            this->entity = nullptr;
+        }
+        
+        void Component::update(float dt)
         {
             
         }

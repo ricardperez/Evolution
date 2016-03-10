@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		194AAD3D1C91D5B3009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
+		194AAD3E1C91DEE8009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		19B13DE21C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
 		19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
 		19B13DE41C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DD21C896A0D00F5F5A8 /* JsonUtil.cpp */; };
@@ -143,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		194AAD3B1C91D5B3009B3A07 /* MapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapView.cpp; sourceTree = "<group>"; };
+		194AAD3C1C91D5B3009B3A07 /* MapView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapView.hpp; sourceTree = "<group>"; };
 		19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Crypto.cpp; sourceTree = "<group>"; };
 		19B13DD01C896A0D00F5F5A8 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
 		19B13DD11C896A0D00F5F5A8 /* DeclaredTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclaredTypes.h; sourceTree = "<group>"; };
@@ -445,11 +449,13 @@
 			children = (
 				19B13E8F1C89AA4700F5F5A8 /* Camera */,
 				19B13EA01C89DE7500F5F5A8 /* Component */,
-				19B13E811C897B6700F5F5A8 /* Screens */,
 				19B13E941C89D84A00F5F5A8 /* Map.cpp */,
 				19B13E951C89D84A00F5F5A8 /* Map.hpp */,
 				19B13E981C89D91300F5F5A8 /* MapEntity.cpp */,
 				19B13E991C89D91300F5F5A8 /* MapEntity.hpp */,
+				194AAD3B1C91D5B3009B3A07 /* MapView.cpp */,
+				194AAD3C1C91D5B3009B3A07 /* MapView.hpp */,
+				19B13E811C897B6700F5F5A8 /* Screens */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -775,6 +781,7 @@
 				19B13E841C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
 				19B13DF01C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				194AAD3D1C91D5B3009B3A07 /* MapView.cpp in Sources */,
 				19B13E961C89D84A00F5F5A8 /* Map.cpp in Sources */,
 				19B13E9A1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
 				19B13E921C89AD0C00F5F5A8 /* Camera.cpp in Sources */,
@@ -795,6 +802,7 @@
 				19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */,
 				19B13DED1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
 				19B13DE51C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
+				194AAD3E1C91DEE8009B3A07 /* MapView.cpp in Sources */,
 				19B13E581C8975B200F5F5A8 /* json_reader.cpp in Sources */,
 				19B13E9B1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
 				19B13E971C89D84A00F5F5A8 /* Map.cpp in Sources */,

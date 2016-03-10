@@ -11,11 +11,25 @@
 
 #include "Component.hpp"
 
+namespace cocos2d
+{
+    class Node;
+}
+
 namespace MelonGames
 {
     namespace Evolution
     {
-        
+        class ViewComponent : public Component
+        {
+        public:
+            DECLARE_TYPE_WITH_BASE_TYPE(ViewComponent, Component);
+            
+            void update(float dt) override;
+            
+        private:
+            cocos2d::Node* mainNode;
+        };
     }
 }
 
