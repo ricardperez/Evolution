@@ -36,7 +36,11 @@ namespace MelonGames
         
         void Component::update(float dt)
         {
-            
+        }
+        
+        MapEntity* Component::getMapEntity() const
+        {
+            return entity;
         }
     }
 }

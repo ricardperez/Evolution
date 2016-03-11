@@ -29,6 +29,8 @@ namespace MelonGames
             virtual void onRemovedFromMapEntity(MapEntity* entity);
             virtual void update(float dt);
             
+            MapEntity* getMapEntity() const;
+            
         protected:
             MapEntity* entity;
         };

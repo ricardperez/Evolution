@@ -10,6 +10,7 @@
 #include "MelonGames/Crypto.h"
 #include "Component/PositionComponent.hpp"
 #include "Component/ViewComponent.hpp"
+#include "Component/TouchListenerComponent.hpp"
 
 #include "2d/CCNode.h"
 #include "math/Vec2.h"
@@ -32,7 +33,14 @@ namespace MelonGames
                 ViewPart* createViewPartSprite(const Json::Value& json)
                 {
                     std::string spriteFrameName = json["sprite"].asString();
-                    ViewPartSprite* result = new ViewPartSprite(spriteFrameName);
+                    auto result = new ViewPartSprite(spriteFrameName);
+                    
+                    return result;
+                }
+                
+                ViewPart* createViewPartSpine(const Json::Value& json)
+                {
+                    auto result = new ViewPartSpine(json["skeleton"].asString(), json["atlas"].asString(), json["scale"].asFloat());
                     
                     return result;
                 }
@@ -47,6 +55,7 @@ namespace MelonGames
                 {
                     static std::map<unsigned int, std::function<ViewPart*(const Json::Value&)>> lambdas = {
                         {Crypto::stringHash("Sprite"), createViewPartSprite},
+                        {Crypto::stringHash("Spine"), createViewPartSpine},
                     };
                     
                     ViewPart* result = nullptr;
@@ -96,6 +105,16 @@ namespace MelonGames
                 
                 return result;
             }
+            
+            Component* createTouchListenerComponent(const Json::Value& json)
+            {
+                auto actionStr = json["action"].asString();
+                auto result = new TouchListenerComponent(actionStr);
+                auto& boundsJson = json["bounds"];
+                result->setBounds(vec2FromJson(boundsJson[0]), vec2FromJson(boundsJson[1]));
+                
+                return result;
+            }
         }
         
         Component* ComponentFactory::createComponent(const Json::Value &json)
@@ -103,6 +122,7 @@ namespace MelonGames
             static std::map<unsigned int, std::function<Component*(const Json::Value&)>> lambdas = {
                 {Crypto::stringHash("Position"), ComponentFactoryFunctions::createPositionComponent},
                 {Crypto::stringHash("View"), ComponentFactoryFunctions::createViewComponent},
+                {Crypto::stringHash("TouchListener"), ComponentFactoryFunctions::createTouchListenerComponent},
             };
             
             std::string type = json["type"].asString();

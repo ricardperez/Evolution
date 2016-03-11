@@ -14,6 +14,8 @@
 #include "2d/CCNode.h"
 #include "2d/CCSprite.h"
 #include "MelonGames/SpriteFrameHelper.h"
+#include "spine/spine.h"
+#include <spine/spine-cocos2dx.h>
 
 namespace MelonGames
 {
@@ -155,6 +157,7 @@ namespace MelonGames
         
 #pragma mark - ViewPartSprite
         ViewPartSprite::ViewPartSprite(const std::string& spriteFrameName)
+        : sprite(nullptr)
         {
             sprite = cocos2d::Sprite::createWithSpriteFrame(SpriteFrameHelper::spriteFrameOrDefault(spriteFrameName));
             sprite->retain();
@@ -168,6 +171,50 @@ namespace MelonGames
         cocos2d::Node* ViewPartSprite::getNode()
         {
             return sprite;
+        }
+        
+#pragma mark - ViewPartSpine
+        ViewPartSpine::ViewPartSpine(const std::string& skeletonDataFile, const std::string& atlasFile, float scale)
+        {
+            skeletonNode = spine::SkeletonAnimation::createWithFile(skeletonDataFile, atlasFile, scale);
+            skeletonNode->setScale(0.5);
+            
+            skeletonNode->setStartListener( [this] (int trackIndex) {
+//                spTrackEntry* entry = spAnimationState_getCurrent(skeletonNode->getState(), trackIndex);
+//                const char* animationName = (entry && entry->animation) ? entry->animation->name : 0;
+//                CCLOG("%d start: %s", trackIndex, animationName);
+            });
+            skeletonNode->setEndListener( [] (int trackIndex) {
+//                CCLOG("%d end", trackIndex);
+            });
+            skeletonNode->setCompleteListener( [] (int trackIndex, int loopCount) {
+//                CCLOG("%d complete: %d", trackIndex, loopCount);
+            });
+            skeletonNode->setEventListener( [] (int trackIndex, spEvent* event) {
+//                CCLOG("%d event: %s, %d, %f, %s", trackIndex, event->data->name, event->intValue, event->floatValue, event->stringValue);
+            });
+            
+//            skeletonNode->setMix("walk", "jump", 0.2f);
+//            skeletonNode->setMix("jump", "run", 0.2f);
+            skeletonNode->setAnimation(0, "walk", true);
+//            spTrackEntry* jumpEntry = skeletonNode->addAnimation(0, "jump", false, 3);
+//            skeletonNode->addAnimation(0, "run", true);
+            
+//            skeletonNode->setTrackStartListener(jumpEntry, [] (int trackIndex) {
+//                CCLOG("jumped!");
+//            });
+            
+            skeletonNode->retain();
+        }
+        
+        ViewPartSpine::~ViewPartSpine()
+        {
+            skeletonNode->release();
+        }
+        
+        cocos2d::Node* ViewPartSpine::getNode()
+        {
+            return skeletonNode;
         }
     }
 }

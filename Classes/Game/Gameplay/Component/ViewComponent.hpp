@@ -19,6 +19,11 @@ namespace cocos2d
     class Sprite;
 }
 
+namespace spine
+{
+    class SkeletonAnimation;
+}
+
 namespace MelonGames
 {
     namespace Evolution
@@ -82,12 +87,26 @@ namespace MelonGames
             DECLARE_TYPE_WITH_BASE_TYPE(ViewPartSprite, ViewPart);
             
             ViewPartSprite(const std::string& spriteFrameName);
-            virtual ~ViewPartSprite();
+            ~ViewPartSprite();
             
-            virtual cocos2d::Node* getNode() override;
+            cocos2d::Node* getNode() override;
             
         private:
             cocos2d::Sprite* sprite;
+        };
+        
+        class ViewPartSpine : public ViewPart
+        {
+        public:
+            DECLARE_TYPE_WITH_BASE_TYPE(ViewPartSpine, ViewPart);
+            
+            ViewPartSpine(const std::string& skeletonDataFile, const std::string& atlasFile, float scale);
+            ~ViewPartSpine();
+            
+            cocos2d::Node* getNode() override;
+            
+        private:
+            spine::SkeletonAnimation* skeletonNode;
         };
     }
 }

@@ -31,6 +31,11 @@ namespace MelonGames
         {
             for (auto entity : entities)
             {
+                entity->onRemovedFromMap(this);
+            }
+            
+            for (auto entity : entities)
+            {
                 delete entity;
             }
             
@@ -101,13 +106,13 @@ namespace MelonGames
                 delayedEntityOperations.push_back(DelayedEntityOperation(DelayedEntityOperation::Operation::eRemove, entity));
             } else
             {
+                entity->onRemovedFromMap(this);
+                
                 auto it = std::find(entities.begin(), entities.end(), entity);
                 if (it != entities.end())
                 {
                     entities.erase(it);
                 }
-                
-                entity->onRemovedFromMap(this);
                 
                 delete entity;
             }

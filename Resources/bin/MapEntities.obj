@@ -28,6 +28,30 @@
 					]
 				}
 			]
+		},
+		{
+			"super": "EntityBase",
+			"name":"Character",
+			"components":
+			[
+				{
+					"type":"View",
+					"parts":
+					[
+						{
+							"type":"Spine",
+							"skeleton": "spine/spineboy.json",
+							"atlas": "spine/spineboy.atlas",
+							"scale": 0.3
+						}
+					]
+				},
+				{
+					"type": "TouchListener",
+					"bounds": [[-50, 0], [50, 150]],
+					"action": "setRallyPoint"
+				}
+			]
 		}
 	]
 }

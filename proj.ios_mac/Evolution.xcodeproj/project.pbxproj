@@ -13,6 +13,10 @@
 		1909443B1C92C8AF000F3F93 /* ComponentFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944381C92C8AF000F3F93 /* ComponentFactory.cpp */; };
 		1909443D1C92D5BA000F3F93 /* bin in Resources */ = {isa = PBXBuildFile; fileRef = 1909443C1C92D5BA000F3F93 /* bin */; };
 		1909443E1C92D5BA000F3F93 /* bin in Resources */ = {isa = PBXBuildFile; fileRef = 1909443C1C92D5BA000F3F93 /* bin */; };
+		190944401C92E400000F3F93 /* spine in Resources */ = {isa = PBXBuildFile; fileRef = 1909443F1C92E400000F3F93 /* spine */; };
+		190944411C92E400000F3F93 /* spine in Resources */ = {isa = PBXBuildFile; fileRef = 1909443F1C92E400000F3F93 /* spine */; };
+		190944441C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */; };
+		190944451C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */; };
 		194AAD3D1C91D5B3009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		194AAD3E1C91DEE8009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		19B13DE21C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
@@ -156,6 +160,9 @@
 		190944381C92C8AF000F3F93 /* ComponentFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentFactory.cpp; sourceTree = "<group>"; };
 		190944391C92C8AF000F3F93 /* ComponentFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ComponentFactory.hpp; sourceTree = "<group>"; };
 		1909443C1C92D5BA000F3F93 /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
+		1909443F1C92E400000F3F93 /* spine */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spine; sourceTree = "<group>"; };
+		190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchListenerComponent.cpp; sourceTree = "<group>"; };
+		190944431C92E6D7000F3F93 /* TouchListenerComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TouchListenerComponent.hpp; sourceTree = "<group>"; };
 		194AAD3B1C91D5B3009B3A07 /* MapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapView.cpp; sourceTree = "<group>"; };
 		194AAD3C1C91D5B3009B3A07 /* MapView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapView.hpp; sourceTree = "<group>"; };
 		19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Crypto.cpp; sourceTree = "<group>"; };
@@ -502,6 +509,8 @@
 				19B13EEA1C89E00C00F5F5A8 /* PositionComponent.hpp */,
 				19B13EED1C89E1BD00F5F5A8 /* ViewComponent.cpp */,
 				19B13EEE1C89E1BD00F5F5A8 /* ViewComponent.hpp */,
+				190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */,
+				190944431C92E6D7000F3F93 /* TouchListenerComponent.hpp */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -572,6 +581,7 @@
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
+				1909443F1C92E400000F3F93 /* spine */,
 				19B13E861C89817300F5F5A8 /* tilemaps */,
 			);
 			name = Resources;
@@ -734,6 +744,7 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				190944401C92E400000F3F93 /* spine in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
@@ -764,6 +775,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190944411C92E400000F3F93 /* spine in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				19B13E881C89817300F5F5A8 /* tilemaps in Resources */,
 				19B13E5C1C8975B200F5F5A8 /* json_valueiterator.inl in Resources */,
@@ -793,6 +805,7 @@
 				19B13E711C897A3800F5F5A8 /* AppDelegate.cpp in Sources */,
 				19B13EEF1C89E1BD00F5F5A8 /* ViewComponent.cpp in Sources */,
 				19B13E5D1C8975B200F5F5A8 /* json_writer.cpp in Sources */,
+				190944441C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */,
 				190944361C92C65D000F3F93 /* MapEntityFactory.cpp in Sources */,
 				19B13DE61C896A0D00F5F5A8 /* Random.cpp in Sources */,
 				19B13E591C8975B200F5F5A8 /* json_value.cpp in Sources */,
@@ -839,6 +852,7 @@
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				19B13DF11C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
 				19B13E801C897AAD00F5F5A8 /* ScreenController.cpp in Sources */,
+				190944451C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

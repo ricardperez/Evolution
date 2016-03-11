@@ -24,6 +24,11 @@ namespace MelonGames
         {
             for (auto component : components)
             {
+                component->onRemovedFromMapEntity(this);
+            }
+            
+            for (auto component : components)
+            {
                 delete component;
             }
             
@@ -108,11 +113,11 @@ namespace MelonGames
             {
                 auto it = std::find(components.begin(), components.end(), component);
                 assert(it != components.end());
-                components.erase(it);
                 if (map)
                 {
                     component->onRemovedFromMapEntity(this);
                 }
+                components.erase(it);
                 
                 delete component;
             }
