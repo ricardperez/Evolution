@@ -17,6 +17,20 @@
 		190944411C92E400000F3F93 /* spine in Resources */ = {isa = PBXBuildFile; fileRef = 1909443F1C92E400000F3F93 /* spine */; };
 		190944441C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */; };
 		190944451C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */; };
+		190944561C92F467000F3F93 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1909444A1C92F467000F3F93 /* .gitignore */; };
+		190944571C92F467000F3F93 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1909444A1C92F467000F3F93 /* .gitignore */; };
+		190944581C92F467000F3F93 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909444D1C92F467000F3F93 /* Graph.cpp */; };
+		190944591C92F467000F3F93 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909444D1C92F467000F3F93 /* Graph.cpp */; };
+		1909445A1C92F467000F3F93 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909444F1C92F467000F3F93 /* PathFinder.cpp */; };
+		1909445B1C92F467000F3F93 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909444F1C92F467000F3F93 /* PathFinder.cpp */; };
+		1909445C1C92F467000F3F93 /* Position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944511C92F467000F3F93 /* Position.cpp */; };
+		1909445D1C92F467000F3F93 /* Position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944511C92F467000F3F93 /* Position.cpp */; };
+		1909445E1C92F467000F3F93 /* PositionConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944531C92F467000F3F93 /* PositionConverter.cpp */; };
+		1909445F1C92F467000F3F93 /* PositionConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944531C92F467000F3F93 /* PositionConverter.cpp */; };
+		190944601C92F467000F3F93 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 190944551C92F467000F3F93 /* README.md */; };
+		190944611C92F467000F3F93 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 190944551C92F467000F3F93 /* README.md */; };
+		190944641C92F4B7000F3F93 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944621C92F4B7000F3F93 /* PathFinder.cpp */; };
+		190944651C92F4B7000F3F93 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944621C92F4B7000F3F93 /* PathFinder.cpp */; };
 		194AAD3D1C91D5B3009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		194AAD3E1C91DEE8009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		19B13DE21C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
@@ -163,6 +177,18 @@
 		1909443F1C92E400000F3F93 /* spine */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spine; sourceTree = "<group>"; };
 		190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchListenerComponent.cpp; sourceTree = "<group>"; };
 		190944431C92E6D7000F3F93 /* TouchListenerComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TouchListenerComponent.hpp; sourceTree = "<group>"; };
+		1909444A1C92F467000F3F93 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1909444D1C92F467000F3F93 /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		1909444E1C92F467000F3F93 /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		1909444F1C92F467000F3F93 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathFinder.cpp; sourceTree = "<group>"; };
+		190944501C92F467000F3F93 /* PathFinder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PathFinder.hpp; sourceTree = "<group>"; };
+		190944511C92F467000F3F93 /* Position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Position.cpp; sourceTree = "<group>"; };
+		190944521C92F467000F3F93 /* Position.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Position.hpp; sourceTree = "<group>"; };
+		190944531C92F467000F3F93 /* PositionConverter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PositionConverter.cpp; sourceTree = "<group>"; };
+		190944541C92F467000F3F93 /* PositionConverter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PositionConverter.hpp; sourceTree = "<group>"; };
+		190944551C92F467000F3F93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		190944621C92F4B7000F3F93 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathFinder.cpp; sourceTree = "<group>"; };
+		190944631C92F4B7000F3F93 /* PathFinder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PathFinder.hpp; sourceTree = "<group>"; };
 		194AAD3B1C91D5B3009B3A07 /* MapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapView.cpp; sourceTree = "<group>"; };
 		194AAD3C1C91D5B3009B3A07 /* MapView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapView.hpp; sourceTree = "<group>"; };
 		19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Crypto.cpp; sourceTree = "<group>"; };
@@ -335,6 +361,39 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		190944491C92F467000F3F93 /* A* */ = {
+			isa = PBXGroup;
+			children = (
+				1909444A1C92F467000F3F93 /* .gitignore */,
+				1909444B1C92F467000F3F93 /* A* */,
+				190944551C92F467000F3F93 /* README.md */,
+			);
+			path = "A*";
+			sourceTree = "<group>";
+		};
+		1909444B1C92F467000F3F93 /* A* */ = {
+			isa = PBXGroup;
+			children = (
+				1909444C1C92F467000F3F93 /* PathFinder */,
+			);
+			path = "A*";
+			sourceTree = "<group>";
+		};
+		1909444C1C92F467000F3F93 /* PathFinder */ = {
+			isa = PBXGroup;
+			children = (
+				1909444D1C92F467000F3F93 /* Graph.cpp */,
+				1909444E1C92F467000F3F93 /* Graph.hpp */,
+				1909444F1C92F467000F3F93 /* PathFinder.cpp */,
+				190944501C92F467000F3F93 /* PathFinder.hpp */,
+				190944511C92F467000F3F93 /* Position.cpp */,
+				190944521C92F467000F3F93 /* Position.hpp */,
+				190944531C92F467000F3F93 /* PositionConverter.cpp */,
+				190944541C92F467000F3F93 /* PositionConverter.hpp */,
+			);
+			path = PathFinder;
+			sourceTree = "<group>";
+		};
 		19B13DCD1C896A0D00F5F5A8 /* MelonGames */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,17 +526,19 @@
 			children = (
 				19B13E8F1C89AA4700F5F5A8 /* Camera */,
 				19B13EA01C89DE7500F5F5A8 /* Component */,
+				190944381C92C8AF000F3F93 /* ComponentFactory.cpp */,
+				190944391C92C8AF000F3F93 /* ComponentFactory.hpp */,
 				19B13E941C89D84A00F5F5A8 /* Map.cpp */,
 				19B13E951C89D84A00F5F5A8 /* Map.hpp */,
 				19B13E981C89D91300F5F5A8 /* MapEntity.cpp */,
 				19B13E991C89D91300F5F5A8 /* MapEntity.hpp */,
-				194AAD3B1C91D5B3009B3A07 /* MapView.cpp */,
-				194AAD3C1C91D5B3009B3A07 /* MapView.hpp */,
-				19B13E811C897B6700F5F5A8 /* Screens */,
 				190944341C92C65D000F3F93 /* MapEntityFactory.cpp */,
 				190944351C92C65D000F3F93 /* MapEntityFactory.hpp */,
-				190944381C92C8AF000F3F93 /* ComponentFactory.cpp */,
-				190944391C92C8AF000F3F93 /* ComponentFactory.hpp */,
+				194AAD3B1C91D5B3009B3A07 /* MapView.cpp */,
+				194AAD3C1C91D5B3009B3A07 /* MapView.hpp */,
+				190944621C92F4B7000F3F93 /* PathFinder.cpp */,
+				190944631C92F4B7000F3F93 /* PathFinder.hpp */,
+				19B13E811C897B6700F5F5A8 /* Screens */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -591,6 +652,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				190944491C92F467000F3F93 /* A* */,
 				19B13E6B1C897A3800F5F5A8 /* Game */,
 				19B13DCD1C896A0D00F5F5A8 /* MelonGames */,
 			);
@@ -741,6 +803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				190944561C92F467000F3F93 /* .gitignore in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
@@ -779,6 +842,7 @@
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				19B13E881C89817300F5F5A8 /* tilemaps in Resources */,
 				19B13E5C1C8975B200F5F5A8 /* json_valueiterator.inl in Resources */,
+				190944571C92F467000F3F93 /* .gitignore in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				1909443E1C92D5BA000F3F93 /* bin in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
@@ -797,8 +861,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B13E571C8975B200F5F5A8 /* json_reader.cpp in Sources */,
+				190944581C92F467000F3F93 /* Graph.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				1909443A1C92C8AF000F3F93 /* ComponentFactory.cpp in Sources */,
+				190944641C92F4B7000F3F93 /* PathFinder.cpp in Sources */,
+				190944601C92F467000F3F93 /* README.md in Sources */,
 				19B13DE41C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
 				19B13DEE1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */,
 				19B13EEB1C89E00C00F5F5A8 /* PositionComponent.cpp in Sources */,
@@ -808,13 +875,16 @@
 				190944441C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */,
 				190944361C92C65D000F3F93 /* MapEntityFactory.cpp in Sources */,
 				19B13DE61C896A0D00F5F5A8 /* Random.cpp in Sources */,
+				1909445C1C92F467000F3F93 /* Position.cpp in Sources */,
 				19B13E591C8975B200F5F5A8 /* json_value.cpp in Sources */,
 				19B13E7F1C897AAD00F5F5A8 /* ScreenController.cpp in Sources */,
 				19B13EE71C89DF8A00F5F5A8 /* Component.cpp in Sources */,
 				19B13E841C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
 				19B13DF01C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
+				1909445E1C92F467000F3F93 /* PositionConverter.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				194AAD3D1C91D5B3009B3A07 /* MapView.cpp in Sources */,
+				1909445A1C92F467000F3F93 /* PathFinder.cpp in Sources */,
 				19B13E961C89D84A00F5F5A8 /* Map.cpp in Sources */,
 				19B13E9A1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
 				19B13E921C89AD0C00F5F5A8 /* Camera.cpp in Sources */,
@@ -833,14 +903,20 @@
 				19B13EE81C89DF8A00F5F5A8 /* Component.cpp in Sources */,
 				19B13E851C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
 				19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */,
+				190944651C92F4B7000F3F93 /* PathFinder.cpp in Sources */,
+				190944591C92F467000F3F93 /* Graph.cpp in Sources */,
 				1909443B1C92C8AF000F3F93 /* ComponentFactory.cpp in Sources */,
 				19B13DED1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
 				19B13DE51C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
+				1909445D1C92F467000F3F93 /* Position.cpp in Sources */,
 				194AAD3E1C91DEE8009B3A07 /* MapView.cpp in Sources */,
 				19B13E581C8975B200F5F5A8 /* json_reader.cpp in Sources */,
 				19B13E9B1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
 				19B13E971C89D84A00F5F5A8 /* Map.cpp in Sources */,
+				190944611C92F467000F3F93 /* README.md in Sources */,
+				1909445B1C92F467000F3F93 /* PathFinder.cpp in Sources */,
 				19B13E5E1C8975B200F5F5A8 /* json_writer.cpp in Sources */,
+				1909445F1C92F467000F3F93 /* PositionConverter.cpp in Sources */,
 				19B13E931C89AD0C00F5F5A8 /* Camera.cpp in Sources */,
 				19B13E5A1C8975B200F5F5A8 /* json_value.cpp in Sources */,
 				19B13EF01C89E1BD00F5F5A8 /* ViewComponent.cpp in Sources */,
@@ -1035,6 +1111,7 @@
 					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../Classes/Game",
 					"$(SRCROOT)/../Classes/Game/Gameplay",
+					"$(SRCROOT)/../Classes/A*/A*",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -1073,6 +1150,7 @@
 					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../Classes/Game",
 					"$(SRCROOT)/../Classes/Game/Gameplay",
+					"$(SRCROOT)/../Classes/A*/A*",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;

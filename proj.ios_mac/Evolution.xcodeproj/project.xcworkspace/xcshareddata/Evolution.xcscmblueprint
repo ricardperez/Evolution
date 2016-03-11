@@ -5,12 +5,14 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "3D428981406F1146BC65E47841968B004EC1B3E3" : 0,
-    "C3DE4164044E5EF3F929D7679C261F46A9E2265D" : 0
+    "C3DE4164044E5EF3F929D7679C261F46A9E2265D" : 0,
+    "FC4BFB8AB5C6458763E43907A2632E8CA9D193D9" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5E4B9C4C-A1FA-4718-9311-F61CB70724E4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "3D428981406F1146BC65E47841968B004EC1B3E3" : "Evolution\/",
-    "C3DE4164044E5EF3F929D7679C261F46A9E2265D" : "Evolution\/Classes\/MelonGames\/"
+    "C3DE4164044E5EF3F929D7679C261F46A9E2265D" : "Evolution\/Classes\/MelonGames\/",
+    "FC4BFB8AB5C6458763E43907A2632E8CA9D193D9" : "Evolution\/Classes\/A*\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Evolution",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ricardperez\/MelonGames.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3DE4164044E5EF3F929D7679C261F46A9E2265D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/ricardperez\/A-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FC4BFB8AB5C6458763E43907A2632E8CA9D193D9"
     }
   ]
 }

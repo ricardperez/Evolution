@@ -1,3 +1,6 @@
 [submodule "Classes/MelonGames"]
 	path = Classes/MelonGames
 	url = https://github.com/ricardperez/MelonGames.git
+[submodule "Classes/A*"]
+	path = Classes/A*
+	url = git://github.com/ricardperez/A-.git

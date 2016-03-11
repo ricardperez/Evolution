@@ -31,6 +31,7 @@ namespace MelonGames
             ~MapView();
             
             cocos2d::Node* getMainNode() const;
+            const cocos2d::TMXTiledMap* getTiledMap() const;
             
             void parseTiledMapObjects();
             

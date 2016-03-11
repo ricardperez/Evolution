@@ -25,8 +25,6 @@ namespace MelonGames
         , tiledMap(nullptr)
         {
             tiledMap = cocos2d::TMXTiledMap::create("tilemaps/level1.tmx");
-            auto objectsLayer = tiledMap->getLayer("ObjectsLayer");
-            objectsLayer->removeFromParent();
             
             mainNode = cocos2d::Node::create();
             mainNode->addChild(tiledMap);
@@ -42,6 +40,11 @@ namespace MelonGames
         cocos2d::Node* MapView::getMainNode() const
         {
             return mainNode;
+        }
+        
+        const cocos2d::TMXTiledMap* MapView::getTiledMap() const
+        {
+            return tiledMap;
         }
         
         void MapView::parseTiledMapObjects()

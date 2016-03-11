@@ -10,6 +10,9 @@
 #include "MapView.hpp"
 #include "MapEntity.hpp"
 #include "MapEntityFactory.hpp"
+#include "PathFinder.hpp"
+#include "2d/CCTMXTiledMap.h"
+#include "2d/CCTMXLayer.h"
 
 namespace MelonGames
 {
@@ -18,6 +21,7 @@ namespace MelonGames
         Map::Map()
         : mapView(nullptr)
         , entityFactory(nullptr)
+        , pathFinder(nullptr)
         , updating(false)
         {
             entityFactory = new MapEntityFactory();
@@ -25,6 +29,10 @@ namespace MelonGames
             
             mapView = new MapView(this);
             mapView->parseTiledMapObjects();
+            
+            pathFinder = new PathFinder(this);
+            
+            mapView->getTiledMap()->getLayer("ObjectsLayer")->removeFromParent();
         }
         
         Map::~Map()
@@ -44,8 +52,8 @@ namespace MelonGames
                 delete delayedEntityOperation.entity;
             }
             
+            delete pathFinder;
             delete mapView;
-            
             delete entityFactory;
         }
         
@@ -57,6 +65,11 @@ namespace MelonGames
         MapEntityFactory* Map::getEntityFactory() const
         {
             return entityFactory;
+        }
+        
+        PathFinder* Map::getPathFinder() const
+        {
+            return pathFinder;
         }
         
         void Map::update(float dt)
