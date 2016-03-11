@@ -35,6 +35,9 @@ namespace MelonGames
             
             void update(float dt);
             
+            cocos2d::Vec2 gamePositionFromScreenPosition(const cocos2d::Vec2& position) const;
+            cocos2d::Vec2 screenPositionFromGamePosition(const cocos2d::Vec2& position) const;
+            
         private:
             cocos2d::Node* contentNode;
             cocos2d::ClippingNode* clippingNode;

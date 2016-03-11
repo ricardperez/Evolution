@@ -12,6 +12,8 @@
 #include "MapView.hpp"
 #include "PositionComponent.hpp"
 #include "StateComponents.hpp"
+#include "Camera/Camera.hpp"
+#include "Screens/GameScreen.hpp"
 #include "MelonGames/Crypto.h"
 #include "base/CCDirector.h"
 #include "base/CCEventDispatcher.h"
@@ -31,7 +33,8 @@ namespace MelonGames
                 touchListener->setSelected(!selected);
                 if (selected)
                 {
-                    auto touchPosition = touch->getLocation();
+                    auto camera = touchListener->getMapEntity()->getMap()->getGameScreen()->getCamera();
+                    auto touchPosition = camera->gamePositionFromScreenPosition(touch->getLocation());
                     auto walkState = touchListener->getMapEntity()->getComponent<WalkStateComponent>();
                     walkState->setRallyPoint(touchPosition);
                 }
@@ -143,7 +146,10 @@ namespace MelonGames
             cocos2d::Size size(topRight - bottomLeft);
             cocos2d::Rect rect(origin, size);
             
-            return (rect.containsPoint(touch->getLocation()));
+            auto camera = entity->getMap()->getGameScreen()->getCamera();
+            auto touchPosition = camera->gamePositionFromScreenPosition(touch->getLocation());
+            
+            return (rect.containsPoint(touchPosition));
         }
     }
 }

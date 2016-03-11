@@ -24,6 +24,7 @@ namespace MelonGames
             DECLARE_TYPE_WITH_BASE_TYPE(GameScreen, Screen);
         public:
             static GameScreen* create();
+            Camera* getCamera() const;
             
         private:
             GameScreen();

@@ -47,6 +47,7 @@ namespace MelonGames
             if (Base::init())
             {
                 map = new Map();
+                map->setGameScreen(this);
                 camera = new Camera(map->getMapView()->getMainNode());
                 camera->setCameraSize(getContentSize());
                 auto cameraNode = camera->getCameraNode();
@@ -70,6 +71,11 @@ namespace MelonGames
                 map->update(dt);
                 camera->update(dt);
             }, "updateThings");
+        }
+        
+        Camera* GameScreen::getCamera() const
+        {
+            return camera;
         }
     }
 }

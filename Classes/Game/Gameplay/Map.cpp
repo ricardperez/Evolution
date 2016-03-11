@@ -11,6 +11,7 @@
 #include "MapEntity.hpp"
 #include "MapEntityFactory.hpp"
 #include "PathFinder.hpp"
+#include "Screens/GameScreen.hpp"
 #include "2d/CCTMXTiledMap.h"
 #include "2d/CCTMXLayer.h"
 
@@ -19,7 +20,8 @@ namespace MelonGames
     namespace Evolution
     {
         Map::Map()
-        : mapView(nullptr)
+        : gameScreen(nullptr)
+        , mapView(nullptr)
         , entityFactory(nullptr)
         , pathFinder(nullptr)
         , updating(false)
@@ -56,6 +58,16 @@ namespace MelonGames
             delete pathFinder;
             delete mapView;
             delete entityFactory;
+        }
+        
+        void Map::setGameScreen(GameScreen* gameScreen)
+        {
+            this->gameScreen = gameScreen;
+        }
+        
+        GameScreen* Map::getGameScreen() const
+        {
+            return gameScreen;
         }
         
         MapView* Map::getMapView() const

@@ -88,6 +88,16 @@ namespace MelonGames
         {
         }
         
+        cocos2d::Vec2 Camera::gamePositionFromScreenPosition(const cocos2d::Vec2& position) const
+        {
+            return contentNode->convertToNodeSpace(position);
+        }
+        
+        cocos2d::Vec2 Camera::screenPositionFromGamePosition(const cocos2d::Vec2& position) const
+        {
+            return contentNode->convertToWorldSpace(position);
+        }
+        
 #pragma mark - CameraController
         CameraController::CameraController(Camera* camera)
         : camera(camera)

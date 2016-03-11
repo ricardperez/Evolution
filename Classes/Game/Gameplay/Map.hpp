@@ -19,12 +19,16 @@ namespace MelonGames
         class MapEntity;
         class MapEntityFactory;
         class PathFinder;
+        class GameScreen;
         
         class Map
         {
         public:
             Map();
             ~Map();
+            
+            void setGameScreen(GameScreen* gameScreen);
+            GameScreen* getGameScreen() const;
             
             MapView* getMapView() const;
             MapEntityFactory* getEntityFactory() const;
@@ -35,6 +39,7 @@ namespace MelonGames
             void removeEntity(MapEntity* entity);
             
         private:
+            GameScreen* gameScreen;
             MapView* mapView;
             MapEntityFactory* entityFactory;
             PathFinder* pathFinder;

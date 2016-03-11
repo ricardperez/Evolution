@@ -96,6 +96,24 @@
 					}
 				}
 			]
+		},
+		{
+			"super": "EntityBase",
+			"name": "BuildingBase",
+			"components":
+			[
+				{
+					"type": "View",
+					"parts":
+					[
+						{
+							"type": "Sprite",
+							"sprite": "sprites/a_base.png",
+							"anchorPoint": [0.5, 0.0]
+						}
+					]
+				}
+			]
 		}
 	]
 }
