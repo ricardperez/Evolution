@@ -17,6 +17,7 @@ namespace MelonGames
     {
         class MapView;
         class MapEntity;
+        class MapEntityFactory;
         
         class Map
         {
@@ -25,6 +26,7 @@ namespace MelonGames
             ~Map();
             
             MapView* getMapView() const;
+            MapEntityFactory* getEntityFactory() const;
             
             void update(float dt);
             void addEntity(MapEntity* entity);
@@ -32,6 +34,7 @@ namespace MelonGames
             
         private:
             MapView* mapView;
+            MapEntityFactory* entityFactory;
             std::vector<MapEntity*> entities;
             bool updating;
             

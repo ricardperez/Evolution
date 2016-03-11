@@ -9,6 +9,7 @@
 #include "Map.hpp"
 #include "MapView.hpp"
 #include "MapEntity.hpp"
+#include "MapEntityFactory.hpp"
 
 namespace MelonGames
 {
@@ -16,9 +17,14 @@ namespace MelonGames
     {
         Map::Map()
         : mapView(nullptr)
+        , entityFactory(nullptr)
         , updating(false)
         {
-            mapView = new MapView();
+            entityFactory = new MapEntityFactory();
+            entityFactory->addTemplatesFromFile("bin/MapEntities.obj");
+            
+            mapView = new MapView(this);
+            mapView->parseTiledMapObjects();
         }
         
         Map::~Map()
@@ -34,11 +40,18 @@ namespace MelonGames
             }
             
             delete mapView;
+            
+            delete entityFactory;
         }
         
         MapView* Map::getMapView() const
         {
             return mapView;
+        }
+        
+        MapEntityFactory* Map::getEntityFactory() const
+        {
+            return entityFactory;
         }
         
         void Map::update(float dt)
@@ -66,6 +79,7 @@ namespace MelonGames
                         break;
                 }
             }
+            delayedEntityOperations.clear();
         }
         
         void Map::addEntity(MapEntity* entity)
@@ -75,8 +89,8 @@ namespace MelonGames
                 delayedEntityOperations.push_back(DelayedEntityOperation(DelayedEntityOperation::Operation::eAdd, entity));
             } else
             {
-                entity->onAddedToMap(this);
                 entities.push_back(entity);
+                entity->onAddedToMap(this);
             }
         }
         

@@ -7,18 +7,26 @@
 //
 
 #include "MapView.hpp"
+#include "Map.hpp"
+#include "MapEntityFactory.hpp"
+#include "MapEntity.hpp"
+#include "Component/PositionComponent.hpp"
 #include "2d/CCNode.h"
 #include "2d/CCTMXTiledMap.h"
+#include "2d/CCTMXLayer.h"
 
 namespace MelonGames
 {
     namespace Evolution
     {
-        MapView::MapView()
-        : mainNode(nullptr)
+        MapView::MapView(Map* map)
+        : map(map)
+        , mainNode(nullptr)
         , tiledMap(nullptr)
         {
             tiledMap = cocos2d::TMXTiledMap::create("tilemaps/level1.tmx");
+            auto objectsLayer = tiledMap->getLayer("ObjectsLayer");
+            objectsLayer->removeFromParent();
             
             mainNode = cocos2d::Node::create();
             mainNode->addChild(tiledMap);
@@ -36,6 +44,22 @@ namespace MelonGames
             return mainNode;
         }
         
+        void MapView::parseTiledMapObjects()
+        {
+            auto& objectGroups = tiledMap->getObjectGroups();
+            for (cocos2d::TMXObjectGroup* objectGroup : objectGroups)
+            {
+                for (auto& object : objectGroup->getObjects())
+                {
+                    auto& objectMap = object.asValueMap();
+                    auto objectName = objectMap["name"].asString();
+                    auto mapEntity = map->getEntityFactory()->createEntity(objectName);
+                    mapEntity->getComponent<PositionComponent>()->setPosition(cocos2d::Vec3(objectMap["x"].asFloat(), objectMap["y"].asFloat(), objectMap["z"].asFloat()));
+                    map->addEntity(mapEntity);
+                    
+                }
+            }
+        }
         
         namespace PositionProjector
         {

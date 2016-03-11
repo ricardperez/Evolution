@@ -67,6 +67,7 @@ namespace MelonGames
             Base::onEnterTransitionDidFinish();
             
             schedule([&](float dt)->void {
+                map->update(dt);
                 camera->update(dt);
             }, "updateThings");
         }

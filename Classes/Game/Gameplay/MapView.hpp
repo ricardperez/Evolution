@@ -22,15 +22,20 @@ namespace MelonGames
 {
     namespace Evolution
     {
+        class Map;
+        
         class MapView
         {
         public:
-            MapView();
+            MapView(Map* map);
             ~MapView();
             
             cocos2d::Node* getMainNode() const;
             
+            void parseTiledMapObjects();
+            
         private:
+            Map* map;
             cocos2d::Node* mainNode;
             cocos2d::TMXTiledMap* tiledMap;
         };

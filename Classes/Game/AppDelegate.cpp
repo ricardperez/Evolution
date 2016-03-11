@@ -77,9 +77,6 @@ namespace MelonGames
             
             register_all_packages();
             
-            cocos2d::FileUtils::getInstance()->addSearchPath("fonts");
-            cocos2d::FileUtils::getInstance()->addSearchPath("tilemaps");
-            
             ScreenController::getInstance()->replaceScreen(GameScreen::create());
             
             return true;

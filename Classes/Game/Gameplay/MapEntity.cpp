@@ -15,6 +15,7 @@ namespace MelonGames
     {
         MapEntity::MapEntity()
         : map(nullptr)
+        , updating(false)
         {
             
         }

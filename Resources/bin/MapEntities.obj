@@ -1,0 +1,33 @@
+{
+	"obj":
+	[
+		{
+			"name":"EntityBase",
+			"abstract": true,
+			"components":
+			[
+				{
+					"type":"Position"
+				}
+			]
+		},
+		{
+			"super": "EntityBase",
+			"name":"Tree",
+			"components":
+			[
+				{
+					"type":"View",
+					"parts":
+					[
+						{
+							"type":"Sprite",
+							"sprite": "tilemaps/tileset/tree2-final.png",
+							"anchorPoint": [0.5, 0.0]
+						}
+					]
+				}
+			]
+		}
+	]
+}
