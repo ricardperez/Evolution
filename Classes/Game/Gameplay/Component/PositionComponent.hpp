@@ -11,6 +11,7 @@
 
 #include "Component.hpp"
 #include "math/Vec3.h"
+#include "math/Vec2.h"
 #include <Signal/Signal.h>
 
 namespace MelonGames
@@ -24,6 +25,9 @@ namespace MelonGames
             
             const cocos2d::Vec3& getPosition() const;
             void setPosition(const cocos2d::Vec3& position);
+            
+            cocos2d::Vec2 getGroundPosition() const;
+            void setGroundPosition(const cocos2d::Vec2& position);
             
             Gallant::Signal1<PositionComponent*>& getPositionChangedSignal();
             

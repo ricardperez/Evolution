@@ -15,7 +15,8 @@
 #include "PathFinder/Position.hpp"
 #include "2d/CCTMXTiledMap.h"
 #include "2d/CCTMXLayer.h"
-
+#include "2d/CCDrawNode.h"
+#include "2d/CCLayer.h"
 
 namespace MelonGames
 {
@@ -43,7 +44,7 @@ namespace MelonGames
                     auto tile = objectsLayer->getTileAt(cocos2d::Vec2(x,y));
                     if (tile != nullptr)
                     {
-                        graph->markPositionAsNonWalkable(x, y);
+                        graph->markPositionAsNonWalkable(x, (graph->getHeight()-1 - y));
                     }
                 }
             }
@@ -73,6 +74,48 @@ namespace MelonGames
             }
             
             return false;
+        }
+        
+        cocos2d::Node* PathFinder::createRepresentativeNode() const
+        {
+            auto& screenSize = map->getMapView()->getMainNode()->getContentSize();
+            float cellsWidth = (screenSize.width / graph->getWidth());
+            float cellsHeight = (screenSize.height / graph->getHeight());
+            
+            auto result = cocos2d::Node::create();
+            
+            auto traversableColor = cocos2d::Color4B::WHITE;
+            traversableColor.a = 0;
+            auto intraversableColor = cocos2d::Color4B::WHITE;
+            intraversableColor.a = 75;
+            
+            auto drawNode = cocos2d::DrawNode::create();
+            result->addChild(drawNode, 10);
+            
+            for (int y=0; y<graph->getHeight(); ++y)
+            {
+                for (int x=0; x<graph->getWidth(); ++x)
+                {
+                    bool traversable = graph->isPositionWalkable(x, y);
+                    
+                    auto layer = cocos2d::LayerColor::create((traversable ? traversableColor : intraversableColor), cellsWidth, cellsHeight);
+                    auto screenPosition = positionConverter->screenPositionFromGraphPosition(AStar::GraphPosition(x,y));
+                    layer->setPosition(screenPosition.x, screenPosition.y);
+                    result->addChild(layer);
+                }
+            }
+            
+            cocos2d::Color4F linesColor(0.5f, 0.5f, 0.5f, 0.3f);
+            for (int x=0; x<graph->getWidth(); ++x)
+            {
+                drawNode->drawLine(cocos2d::Vec2(x*cellsWidth, 0.0f), cocos2d::Vec2(x*cellsWidth, screenSize.height), linesColor);
+            }
+            for (int y=0; y<graph->getHeight(); ++y)
+            {
+                drawNode->drawLine(cocos2d::Vec2(0.0f, y*cellsHeight), cocos2d::Vec2(screenSize.width, y*cellsHeight), linesColor);
+            }
+            
+            return result;
         }
     }
 }

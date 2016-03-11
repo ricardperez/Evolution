@@ -11,6 +11,10 @@
 #include "Component/PositionComponent.hpp"
 #include "Component/ViewComponent.hpp"
 #include "Component/TouchListenerComponent.hpp"
+#include "Component/BehaviourComponent.hpp"
+#include "Component/StateComponents.hpp"
+#include "Behaviour/Behaviour.hpp"
+#include "Behaviour/MoveBehaviours.hpp"
 
 #include "2d/CCNode.h"
 #include "math/Vec2.h"
@@ -28,6 +32,7 @@ namespace MelonGames
                 return result;
             }
             
+#pragma mark - ViewPartFactoryFunctions
             namespace ViewPartFactoryFunctions
             {
                 ViewPart* createViewPartSprite(const Json::Value& json)
@@ -80,6 +85,118 @@ namespace MelonGames
                 }
             }
             
+#pragma mark - BehaviourFactoryFunctions
+            namespace BehaviourFactoryFunctions
+            {
+                Behaviour* createBehaviour(const Json::Value& json);
+                
+                Behaviour* createRepeaterBehaviour(const Json::Value& json)
+                {
+                    auto child = createBehaviour(json["child"]);
+                    auto result = new BehaviourRepeater(child);
+                    return result;
+                }
+                
+                Behaviour* createSequenceBehaviour(const Json::Value& json)
+                {
+                    auto result = new BehaviourSequence();
+                    
+                    for (auto& behaviourJson : json["children"])
+                    {
+                        auto child = createBehaviour(behaviourJson);
+                        result->addBehaviour(child);
+                    }
+                    
+                    return result;
+                }
+                
+                Behaviour* createSelectorBehaviour(const Json::Value& json)
+                {
+                    auto result = new BehaviourSelector();
+                    
+                    for (auto& behaviourJson : json["children"])
+                    {
+                        auto child = createBehaviour(behaviourJson);
+                        result->addBehaviour(child);
+                    }
+                    
+                    return result;
+                }
+                
+                Behaviour* createDecoratorBehaviour(const Json::Value& json)
+                {
+                    auto returningResultStr = json["result"].asString();
+                    BehaviourResult returningResult;
+                    if (returningResultStr == "success")
+                    {
+                        returningResult = BehaviourResult::eSuccess;
+                    } else if (returningResultStr == "failure")
+                    {
+                        returningResult = BehaviourResult::eFailure;
+                    } else if (returningResultStr == "running")
+                    {
+                        returningResult = BehaviourResult::eRunning;
+                    } else
+                    {
+                        return nullptr;
+                    }
+                    
+                    auto child = createBehaviour(json["child"]);
+                    auto result = new BehaviourDecorator(child, returningResult, json["evenIfRunning"].asBool());
+                    return result;
+                }
+                
+                Behaviour* createCheckRallyPointChangedBehaviour(const Json::Value& json)
+                {
+                    auto result = new CheckRallyPointChangedBehaviour();
+                    return result;
+                }
+                
+                Behaviour* createCalculatePathBehaviour(const Json::Value& json)
+                {
+                    auto result = new CalculatePathBehaviour();
+                    return result;
+                }
+                
+                Behaviour* createWalkBehaviour(const Json::Value& json)
+                {
+                    auto result = new WalkBehaviour();
+                    return result;
+                }
+                
+                Behaviour* createBehaviour(const Json::Value& json)
+                {
+                    static std::map<unsigned int, std::function<Behaviour*(const Json::Value&)>> lambdas = {
+                        {Crypto::stringHash("Repeater"), createRepeaterBehaviour},
+                        {Crypto::stringHash("Sequence"), createSequenceBehaviour},
+                        {Crypto::stringHash("Selector"), createSelectorBehaviour},
+                        {Crypto::stringHash("Decorator"), createDecoratorBehaviour},
+                        {Crypto::stringHash("CheckRallyPointChanged"), createCheckRallyPointChangedBehaviour},
+                        {Crypto::stringHash("CalculatePath"), createCalculatePathBehaviour},
+                        {Crypto::stringHash("Walk"), createWalkBehaviour},
+                    };
+                    
+                    Behaviour* result = nullptr;
+                    
+                    std::string type = json["type"].asString();
+                    unsigned int key = Crypto::stringHash(type);
+                    
+                    auto lambdaIt = lambdas.find(key);
+                    if (lambdaIt != lambdas.end())
+                    {
+                        result = lambdaIt->second(json);
+                        if (result)
+                        {
+                            return result;
+                        }
+                    }
+                    
+                    CCASSERT(false, ("Could not create a Behaviour of type " + type).c_str());
+                    return nullptr;
+                }
+            }
+            
+#pragma mark - ComponentFactoryFunctions
             Component* createPositionComponent(const Json::Value& json)
             {
                 return new PositionComponent();
@@ -115,6 +232,21 @@ namespace MelonGames
                 
                 return result;
             }
+            
+            Component* createBehaviourComponent(const Json::Value& json)
+            {
+                auto result = new BehaviourComponent();
+                auto behaviour = BehaviourFactoryFunctions::createBehaviour(json["behaviour"]);
+                result->setRootBehaviour(behaviour);
+                return result;
+            }
+            
+            Component* createWalkStateComponent(const Json::Value& json)
+            {
+                auto result = new WalkStateComponent();
+                result->setSpeed(json["speed"].asFloat());
+                return result;
+            }
         }
         
         Component* ComponentFactory::createComponent(const Json::Value &json)
@@ -123,6 +255,8 @@ namespace MelonGames
                 {Crypto::stringHash("Position"), ComponentFactoryFunctions::createPositionComponent},
                 {Crypto::stringHash("View"), ComponentFactoryFunctions::createViewComponent},
                 {Crypto::stringHash("TouchListener"), ComponentFactoryFunctions::createTouchListenerComponent},
+                {Crypto::stringHash("Behaviour"), ComponentFactoryFunctions::createBehaviourComponent},
+                {Crypto::stringHash("WalkState"), ComponentFactoryFunctions::createWalkStateComponent},
             };
             
             std::string type = json["type"].asString();

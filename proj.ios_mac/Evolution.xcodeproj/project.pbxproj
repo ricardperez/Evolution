@@ -31,6 +31,14 @@
 		190944611C92F467000F3F93 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 190944551C92F467000F3F93 /* README.md */; };
 		190944641C92F4B7000F3F93 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944621C92F4B7000F3F93 /* PathFinder.cpp */; };
 		190944651C92F4B7000F3F93 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944621C92F4B7000F3F93 /* PathFinder.cpp */; };
+		190944681C930E92000F3F93 /* BehaviourComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944661C930E92000F3F93 /* BehaviourComponent.cpp */; };
+		190944691C930E92000F3F93 /* BehaviourComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944661C930E92000F3F93 /* BehaviourComponent.cpp */; };
+		1909446D1C930EB1000F3F93 /* Behaviour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909446B1C930EB1000F3F93 /* Behaviour.cpp */; };
+		1909446E1C930EB1000F3F93 /* Behaviour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909446B1C930EB1000F3F93 /* Behaviour.cpp */; };
+		190944711C93175B000F3F93 /* StateComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909446F1C93175B000F3F93 /* StateComponents.cpp */; };
+		190944721C93175B000F3F93 /* StateComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1909446F1C93175B000F3F93 /* StateComponents.cpp */; };
+		190944751C9318A1000F3F93 /* MoveBehaviours.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944731C9318A1000F3F93 /* MoveBehaviours.cpp */; };
+		190944761C9318A1000F3F93 /* MoveBehaviours.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 190944731C9318A1000F3F93 /* MoveBehaviours.cpp */; };
 		194AAD3D1C91D5B3009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		194AAD3E1C91DEE8009B3A07 /* MapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 194AAD3B1C91D5B3009B3A07 /* MapView.cpp */; };
 		19B13DE21C896A0D00F5F5A8 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */; };
@@ -189,6 +197,14 @@
 		190944551C92F467000F3F93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		190944621C92F4B7000F3F93 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathFinder.cpp; sourceTree = "<group>"; };
 		190944631C92F4B7000F3F93 /* PathFinder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PathFinder.hpp; sourceTree = "<group>"; };
+		190944661C930E92000F3F93 /* BehaviourComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BehaviourComponent.cpp; sourceTree = "<group>"; };
+		190944671C930E92000F3F93 /* BehaviourComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BehaviourComponent.hpp; sourceTree = "<group>"; };
+		1909446B1C930EB1000F3F93 /* Behaviour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Behaviour.cpp; sourceTree = "<group>"; };
+		1909446C1C930EB1000F3F93 /* Behaviour.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Behaviour.hpp; sourceTree = "<group>"; };
+		1909446F1C93175B000F3F93 /* StateComponents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateComponents.cpp; sourceTree = "<group>"; };
+		190944701C93175B000F3F93 /* StateComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateComponents.hpp; sourceTree = "<group>"; };
+		190944731C9318A1000F3F93 /* MoveBehaviours.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveBehaviours.cpp; sourceTree = "<group>"; };
+		190944741C9318A1000F3F93 /* MoveBehaviours.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MoveBehaviours.hpp; sourceTree = "<group>"; };
 		194AAD3B1C91D5B3009B3A07 /* MapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapView.cpp; sourceTree = "<group>"; };
 		194AAD3C1C91D5B3009B3A07 /* MapView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapView.hpp; sourceTree = "<group>"; };
 		19B13DCF1C896A0D00F5F5A8 /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Crypto.cpp; sourceTree = "<group>"; };
@@ -394,6 +410,17 @@
 			path = PathFinder;
 			sourceTree = "<group>";
 		};
+		1909446A1C930EA9000F3F93 /* Behaviour */ = {
+			isa = PBXGroup;
+			children = (
+				1909446B1C930EB1000F3F93 /* Behaviour.cpp */,
+				1909446C1C930EB1000F3F93 /* Behaviour.hpp */,
+				190944731C9318A1000F3F93 /* MoveBehaviours.cpp */,
+				190944741C9318A1000F3F93 /* MoveBehaviours.hpp */,
+			);
+			path = Behaviour;
+			sourceTree = "<group>";
+		};
 		19B13DCD1C896A0D00F5F5A8 /* MelonGames */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +551,7 @@
 		19B13E6E1C897A3800F5F5A8 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				1909446A1C930EA9000F3F93 /* Behaviour */,
 				19B13E8F1C89AA4700F5F5A8 /* Camera */,
 				19B13EA01C89DE7500F5F5A8 /* Component */,
 				190944381C92C8AF000F3F93 /* ComponentFactory.cpp */,
@@ -572,6 +600,10 @@
 				19B13EEE1C89E1BD00F5F5A8 /* ViewComponent.hpp */,
 				190944421C92E6D7000F3F93 /* TouchListenerComponent.cpp */,
 				190944431C92E6D7000F3F93 /* TouchListenerComponent.hpp */,
+				190944661C930E92000F3F93 /* BehaviourComponent.cpp */,
+				190944671C930E92000F3F93 /* BehaviourComponent.hpp */,
+				1909446F1C93175B000F3F93 /* StateComponents.cpp */,
+				190944701C93175B000F3F93 /* StateComponents.hpp */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -861,11 +893,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B13E571C8975B200F5F5A8 /* json_reader.cpp in Sources */,
+				1909446D1C930EB1000F3F93 /* Behaviour.cpp in Sources */,
 				190944581C92F467000F3F93 /* Graph.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				1909443A1C92C8AF000F3F93 /* ComponentFactory.cpp in Sources */,
 				190944641C92F4B7000F3F93 /* PathFinder.cpp in Sources */,
 				190944601C92F467000F3F93 /* README.md in Sources */,
+				190944681C930E92000F3F93 /* BehaviourComponent.cpp in Sources */,
 				19B13DE41C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
 				19B13DEE1C896A0D00F5F5A8 /* SpriteFrameHelper.cpp in Sources */,
 				19B13EEB1C89E00C00F5F5A8 /* PositionComponent.cpp in Sources */,
@@ -877,6 +911,7 @@
 				19B13DE61C896A0D00F5F5A8 /* Random.cpp in Sources */,
 				1909445C1C92F467000F3F93 /* Position.cpp in Sources */,
 				19B13E591C8975B200F5F5A8 /* json_value.cpp in Sources */,
+				190944711C93175B000F3F93 /* StateComponents.cpp in Sources */,
 				19B13E7F1C897AAD00F5F5A8 /* ScreenController.cpp in Sources */,
 				19B13EE71C89DF8A00F5F5A8 /* Component.cpp in Sources */,
 				19B13E841C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
@@ -887,6 +922,7 @@
 				1909445A1C92F467000F3F93 /* PathFinder.cpp in Sources */,
 				19B13E961C89D84A00F5F5A8 /* Map.cpp in Sources */,
 				19B13E9A1C89D91300F5F5A8 /* MapEntity.cpp in Sources */,
+				190944751C9318A1000F3F93 /* MoveBehaviours.cpp in Sources */,
 				19B13E921C89AD0C00F5F5A8 /* Camera.cpp in Sources */,
 				19B13DEA1C896A0D00F5F5A8 /* Service.cpp in Sources */,
 				19B13DEC1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
@@ -902,10 +938,13 @@
 				19B13DE71C896A0D00F5F5A8 /* Random.cpp in Sources */,
 				19B13EE81C89DF8A00F5F5A8 /* Component.cpp in Sources */,
 				19B13E851C897B7100F5F5A8 /* GameScreen.cpp in Sources */,
+				1909446E1C930EB1000F3F93 /* Behaviour.cpp in Sources */,
 				19B13DE31C896A0D00F5F5A8 /* Crypto.cpp in Sources */,
 				190944651C92F4B7000F3F93 /* PathFinder.cpp in Sources */,
 				190944591C92F467000F3F93 /* Graph.cpp in Sources */,
 				1909443B1C92C8AF000F3F93 /* ComponentFactory.cpp in Sources */,
+				190944761C9318A1000F3F93 /* MoveBehaviours.cpp in Sources */,
+				190944691C930E92000F3F93 /* BehaviourComponent.cpp in Sources */,
 				19B13DED1C896A0D00F5F5A8 /* ServicesManager.cpp in Sources */,
 				19B13DE51C896A0D00F5F5A8 /* JsonUtil.cpp in Sources */,
 				1909445D1C92F467000F3F93 /* Position.cpp in Sources */,
@@ -929,6 +968,7 @@
 				19B13DF11C896A0D00F5F5A8 /* StringUtils.cpp in Sources */,
 				19B13E801C897AAD00F5F5A8 /* ScreenController.cpp in Sources */,
 				190944451C92E6D7000F3F93 /* TouchListenerComponent.cpp in Sources */,
+				190944721C93175B000F3F93 /* StateComponents.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

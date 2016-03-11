@@ -28,6 +28,17 @@ namespace MelonGames
             }
         }
         
+        cocos2d::Vec2 PositionComponent::getGroundPosition() const
+        {
+            cocos2d::Vec2 result(position.x, position.y);
+            return result;
+        }
+        
+        void PositionComponent::setGroundPosition(const cocos2d::Vec2& position)
+        {
+            setPosition(cocos2d::Vec3(position.x, position.y, this->position.z));
+        }
+        
         Gallant::Signal1<PositionComponent*>& PositionComponent::getPositionChangedSignal()
         {
             return positionChangedSignal;

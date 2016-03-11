@@ -11,6 +11,7 @@
 #include "Map.hpp"
 #include "MapView.hpp"
 #include "PositionComponent.hpp"
+#include "StateComponents.hpp"
 #include "MelonGames/Crypto.h"
 #include "base/CCDirector.h"
 #include "base/CCEventDispatcher.h"
@@ -31,10 +32,8 @@ namespace MelonGames
                 if (selected)
                 {
                     auto touchPosition = touch->getLocation();
-                    auto posComponent = touchListener->getMapEntity()->getComponent<PositionComponent>();
-                    cocos2d::Vec3 position = posComponent->getPosition();
-                    position.set(touchPosition.x, touchPosition.y, position.z);
-                    return posComponent->setPosition(position);
+                    auto walkState = touchListener->getMapEntity()->getComponent<WalkStateComponent>();
+                    walkState->setRallyPoint(touchPosition);
                 }
             }
         }

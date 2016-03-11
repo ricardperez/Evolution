@@ -33,6 +33,7 @@ namespace MelonGames
             pathFinder = new PathFinder(this);
             
             mapView->getTiledMap()->getLayer("ObjectsLayer")->removeFromParent();
+//            mapView->getMainNode()->addChild(pathFinder->createRepresentativeNode());
         }
         
         Map::~Map()

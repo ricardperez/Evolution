@@ -19,6 +19,11 @@ namespace AStar
     class PositionConverter;
 }
 
+namespace cocos2d
+{
+    class Node;
+}
+
 namespace MelonGames
 {
     namespace Evolution
@@ -32,6 +37,7 @@ namespace MelonGames
             ~PathFinder();
             
             bool findPath(const cocos2d::Vec2& origin, const cocos2d::Vec2& destination, std::vector<cocos2d::Vec2>& waypoints) const;
+            cocos2d::Node* createRepresentativeNode() const;
             
         private:
             Map* map;

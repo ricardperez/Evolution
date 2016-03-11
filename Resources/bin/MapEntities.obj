@@ -50,6 +50,50 @@
 					"type": "TouchListener",
 					"bounds": [[-50, 0], [50, 150]],
 					"action": "setRallyPoint"
+				},
+				{
+					"type": "WalkState",
+					"speed": 250
+				},
+				{
+					"type": "Behaviour",
+					"behaviour":
+					{
+						"type": "Repeater",
+						"child":
+						{
+							"type": "Sequence",
+							"children":
+							[
+								{
+									"type": "Decorator",
+									"result": "success",
+									"child":
+									{
+										"type": "Sequence",
+										"children":
+										[
+											{
+												"type": "CheckRallyPointChanged"
+											},
+											{
+												"type": "CalculatePath"
+											}
+										]
+									}
+								},
+								{
+									"type": "Decorator",
+									"result": "failure",
+									"evenIfRunning": true,
+									"child":
+									{
+										"type": "Walk"
+									}
+								}
+							]
+						}
+					}
 				}
 			]
 		}
